@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  Layout, Row, Col, Typography, Modal, Icon, PageHeader, Pagination
+  Layout, Row, Col, Typography, Modal, Icon, Pagination
 } from 'antd'
 import { range } from 'lodash'
 
@@ -51,19 +51,16 @@ class ListDetails extends React.Component {
               offset={2}
               span={20}
             >
-              <PageHeader
-                onBack={() => window.history.back()}
-                title={(
-                  <Typography.Title>
-                    List item 1
-                    {' '}
-                    <Icon
-                      type="minus-circle"
-                      onClick={showDeleteListModal}
-                    />
-                  </Typography.Title>
-)}
-              />
+              <div className="top-margin">
+                <Typography.Title>
+                  List item 1
+                  {' '}
+                  <Icon
+                    type="minus-circle"
+                    onClick={showDeleteListModal}
+                  />
+                </Typography.Title>
+              </div>
             </Col>
           </Row>
           <Row
