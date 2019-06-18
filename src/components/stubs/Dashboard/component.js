@@ -5,7 +5,7 @@ import {
 import { range } from 'lodash'
 
 import Header from '../Header'
-import Movie from './Movie'
+import Movie from '../MovieItem'
 
 const Dashboard = () => (
   <Layout>
@@ -32,9 +32,23 @@ const Dashboard = () => (
           type="flex"
           gutter={16}
         >
-          {range(17).map(item => (
-            <Movie key={item} />
-          ))}
+          <Col
+            span={20}
+            offset={2}
+          >
+            {range(17).map(item => (
+              <Col
+                key={item}
+                xs={{ span: 12 }}
+                sm={{ span: 12 }}
+                md={{ span: 8 }}
+                lg={{ span: 6 }}
+                xl={{ span: 4 }}
+              >
+                <Movie />
+              </Col>
+            ))}
+          </Col>
         </Row>
         <Row
           type="flex"

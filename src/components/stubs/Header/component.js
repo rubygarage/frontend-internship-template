@@ -5,6 +5,7 @@ import {
 
 const Overlay = () => (
   <Menu>
+    <Menu.Item>Dashboard</Menu.Item>
     <Menu.Item>My Lists</Menu.Item>
     <Menu.Item>Logout</Menu.Item>
   </Menu>

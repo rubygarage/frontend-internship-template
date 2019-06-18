@@ -8,6 +8,8 @@ import Dashboard from '../Dashboard'
 import DashboardEmpty from '../DashboardEmpty'
 import DashboardLoading from '../DashboardLoading'
 import Movie from '../Movie'
+import Lists from '../Lists'
+import ListDetails from '../ListDetails'
 
 const Links = () => (
   <React.Fragment>
@@ -25,6 +27,12 @@ const Links = () => (
     </div>
     <div>
       <Link to="/stubs/movie">Movie</Link>
+    </div>
+    <div>
+      <Link to="/stubs/lists">Lists</Link>
+    </div>
+    <div>
+      <Link to="/stubs/list/details">List Details</Link>
     </div>
   </React.Fragment>
 )
@@ -51,6 +59,14 @@ const StubsRoot = () => (
       <Route
         path="/stubs/movie"
         component={Movie}
+      />
+      <Route
+        path="/stubs/lists"
+        component={Lists}
+      />
+      <Route
+        path="/stubs/list/details"
+        component={ListDetails}
       />
       <Route component={Links} />
     </Switch>

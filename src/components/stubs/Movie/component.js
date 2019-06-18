@@ -210,7 +210,6 @@ class Movie extends React.Component {
                     xl={{ span: 4 }}
                   >
                     <Card
-                      hoverable
                       cover={(
                         <img
                           alt="example"
@@ -255,7 +254,6 @@ class Movie extends React.Component {
                     xl={{ span: 4 }}
                   >
                     <Card
-                      hoverable
                       cover={(
                         <img
                           alt="example"
