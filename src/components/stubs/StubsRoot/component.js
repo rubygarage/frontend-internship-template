@@ -10,6 +10,8 @@ import DashboardLoading from '../DashboardLoading'
 import Movie from '../Movie'
 import Lists from '../Lists'
 import ListDetails from '../ListDetails'
+import Watchlist from '../Watchlist'
+import Favorites from '../Favorites/component'
 
 const Links = () => (
   <React.Fragment>
@@ -33,6 +35,12 @@ const Links = () => (
     </div>
     <div>
       <Link to="/stubs/list/details">List Details</Link>
+    </div>
+    <div>
+      <Link to="/stubs/watchlist">Watchlist</Link>
+    </div>
+    <div>
+      <Link to="/stubs/favorites">Favorites</Link>
     </div>
   </React.Fragment>
 )
@@ -67,6 +75,14 @@ const StubsRoot = () => (
       <Route
         path="/stubs/list/details"
         component={ListDetails}
+      />
+      <Route
+        path="/stubs/watchlist"
+        component={Watchlist}
+      />
+      <Route
+        path="/stubs/favorites"
+        component={Favorites}
       />
       <Route component={Links} />
     </Switch>

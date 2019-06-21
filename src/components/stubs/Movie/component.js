@@ -52,7 +52,12 @@ class Movie extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { modalVisible: false, popoverVisible: false }
+    this.state = {
+      modalVisible: false,
+      popoverVisible: false,
+      bookmarked: false,
+      watchlist: false
+    }
 
     this.handleVisiblePopover = (visible) => {
       this.setState({ popoverVisible: visible })
@@ -65,10 +70,20 @@ class Movie extends React.Component {
     this.hideModal = () => {
       this.setState({ modalVisible: false })
     }
+
+    this.handleWatchlist = () => {
+      this.setState(state => ({ watchlist: !state.watchlist }))
+    }
+
+    this.handleBookmark = () => {
+      this.setState(state => ({ bookmarked: !state.bookmarked }))
+    }
   }
 
   render() {
-    const { modalVisible, popoverVisible } = this.state
+    const {
+      modalVisible, popoverVisible, bookmarked, watchlist
+    } = this.state
     return (
       <Layout>
         <Header />
@@ -123,6 +138,18 @@ class Movie extends React.Component {
                   >
                     <Icon type="plus-circle" />
                   </Popover>
+                  {' '}
+                  <Icon
+                    type="heart"
+                    theme={watchlist ? 'filled' : undefined}
+                    onClick={this.handleWatchlist}
+                  />
+                  {' '}
+                  <Icon
+                    type="book"
+                    theme={bookmarked ? 'filled' : undefined}
+                    onClick={this.handleBookmark}
+                  />
                 </Typography.Title>
                 <Typography.Title level={3}>Overview</Typography.Title>
                 <Typography.Paragraph>
