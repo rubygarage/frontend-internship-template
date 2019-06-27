@@ -1,7 +1,7 @@
 import axios from 'axios'
 import Cookies from 'js-cookie'
 
-const baseURL = 'https://api.themoviedb.org/3/'
+const baseURL = 'http://localhost:8080/api/'
 
 const client = axios.create({
   baseURL,

@@ -58,5 +58,14 @@ module.exports = {
       Helpers: path.resolve(__dirname, '../src/helpers'),
       Store: path.resolve(__dirname, '../src/store')
     }
+  },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://api.themoviedb.org/3/',
+        pathRewrite: {'^/api' : ''}
+      },
+      secure: false
+    }
   }
 }
