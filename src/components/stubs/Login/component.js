@@ -12,7 +12,7 @@ const Login = () => (
           justify="center"
         >
           <Col>
-            <Form>
+            <Form className="form__login">
               <Typography.Title>The Movie DB</Typography.Title>
               <Form.Item
                 validateStatus="error"
@@ -20,22 +20,16 @@ const Login = () => (
               >
                 <Input
                   prefix={(
-                    <Icon
-                      type="user"
-                      style={{ color: 'rgba(0,0,0,.25)' }}
-                    />
-)}
+                    <Icon type="user" />
+                  )}
                   placeholder="Username"
                 />
               </Form.Item>
               <Form.Item>
                 <Input
                   prefix={(
-                    <Icon
-                      type="lock"
-                      style={{ color: 'rgba(0,0,0,.25)' }}
-                    />
-)}
+                    <Icon type="lock" />
+                  )}
                   type="password"
                   placeholder="Password"
                 />

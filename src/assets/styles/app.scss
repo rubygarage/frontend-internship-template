@@ -1,6 +1,11 @@
 // Ant Design
 @import "~antd/dist/antd.css";
 
+// Colors
+$white: #fff;
+$blue: #364d79;
+$icon-color: rgba(0, 0, 0, 0.25);
+
 html,
 body,
 #app {
@@ -15,38 +20,64 @@ body,
 }
 
 .ant-layout {
-  background-color: #fff;
+  background-color: $white;
 }
 
 .ant-layout-header .ant-typography {
-  color: #fff;
+  color: $white;
 }
 
 .top-margin {
-  margin-top: 20pt;
+  margin-top: 20px;
+}
+
+.bottom-margin {
+  margin-bottom: 20px;
+}
+
+.bottom-margin-double {
+  margin-bottom: 40px;
+}
+
+.margin-none {
+  margin: 0 !important;
 }
 
 .pagination {
-  margin-top: 10pt;
-  margin-bottom: 10pt;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .ant-carousel .slick-slide {
-  text-align: center;
-  height: 400px;
+  background: $blue;
   line-height: 160px;
-  background: #364d79;
   overflow: hidden;
+  height: 400px;
+  text-align: center;
 }
 
 .movie-image {
-  width: 100%;
-  height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .movie-data {
-  margin-top: 20pt;
+  margin-top: 20px;
+}
+
+.anticon-user,
+.anticon-lock {
+  color: $icon-color;
+}
+
+.form__login {
+  padding: 0 10px;
+}
+
+.ant-card-meta-description {
+  overflow: hidden;
+  height: 100px;
 }

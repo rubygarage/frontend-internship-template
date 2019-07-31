@@ -9,7 +9,10 @@ const Dashboard = () => (
   <Layout>
     <Header />
     <Layout.Content>
-      <Row type="flex">
+      <Row
+        type="flex"
+        className="top-margin bottom-margin-double"
+      >
         <Col
           xs={{ span: 22, offset: 1 }}
           sm={{ span: 20, offset: 2 }}
@@ -21,7 +24,6 @@ const Dashboard = () => (
             placeholder="Enter movie name"
             size="large"
             enterButton="Search"
-            className="top-margin"
           />
         </Col>
       </Row>
