@@ -134,7 +134,7 @@ class Movie extends React.Component {
                         openModal={this.showModal}
                         closePopover={() => this.handleVisiblePopover(false)}
                       />
-)}
+                    )}
                   >
                     <Icon type="plus-circle" />
                   </Popover>
@@ -210,22 +210,34 @@ class Movie extends React.Component {
                 </Typography.Paragraph>
               </Col>
             </Row>
-            <Row>
+            <Row className="top-margin">
               <Col
-                span={10}
-                offset={2}
-                className="top-margin"
+                xs={{ span: 24 }}
+                sm={{ span: 20 }}
+                md={{ span: 20 }}
+                lg={{ span: 20 }}
+                xl={{ span: 20 }}
               >
-                <Typography.Title level={3}>Casts</Typography.Title>
+                <Typography.Title
+                  className="title"
+                  level={3}
+                >
+                  Casts
+                </Typography.Title>
               </Col>
             </Row>
             <Row
-              gutter={8}
               type="flex"
+              justify="center"
+              gutter={8}
+              className="margin-none"
             >
               <Col
-                span={20}
-                offset={2}
+                xs={{ span: 24 }}
+                sm={{ span: 20 }}
+                md={{ span: 20 }}
+                lg={{ span: 20 }}
+                xl={{ span: 20 }}
               >
                 {range(10).map(index => (
                   <Col
@@ -242,8 +254,7 @@ class Movie extends React.Component {
                           alt="example"
                           src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg"
                         />
-)}
-                      className="top-margin"
+                      )}
                     >
                       <Card.Meta
                         title="Robert Downey Jr."
@@ -254,22 +265,34 @@ class Movie extends React.Component {
                 ))}
               </Col>
             </Row>
-            <Row>
+            <Row className="top-margin">
               <Col
-                span={10}
-                offset={2}
-                className="top-margin"
+                xs={{ span: 24 }}
+                sm={{ span: 20 }}
+                md={{ span: 20 }}
+                lg={{ span: 20 }}
+                xl={{ span: 20 }}
               >
-                <Typography.Title level={3}>Crew</Typography.Title>
+                <Typography.Title
+                  className="title"
+                  level={3}
+                >
+                  Crew
+                </Typography.Title>
               </Col>
             </Row>
             <Row
-              gutter={8}
               type="flex"
+              justify="center"
+              gutter={8}
+              className="margin-none"
             >
               <Col
-                span={20}
-                offset={2}
+                xs={{ span: 24 }}
+                sm={{ span: 20 }}
+                md={{ span: 20 }}
+                lg={{ span: 20 }}
+                xl={{ span: 20 }}
               >
                 {range(10).map(index => (
                   <Col
@@ -286,8 +309,7 @@ class Movie extends React.Component {
                           alt="example"
                           src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg"
                         />
-)}
-                      className="top-margin"
+                      )}
                     >
                       <Card.Meta
                         title="Robert Downey Jr."

@@ -13,14 +13,15 @@ const Dashboard = () => (
     <Layout.Content>
       <Row
         type="flex"
+        justify="center"
         className="top-margin bottom-margin-double"
       >
         <Col
-          xs={{ span: 22, offset: 1 }}
-          sm={{ span: 20, offset: 2 }}
-          md={{ span: 18, offset: 3 }}
-          lg={{ span: 16, offset: 4 }}
-          xl={{ span: 14, offset: 5 }}
+          xs={{ span: 22 }}
+          sm={{ span: 20 }}
+          md={{ span: 18 }}
+          lg={{ span: 16 }}
+          xl={{ span: 14 }}
         >
           <Input.Search
             placeholder="Enter movie name"
@@ -31,8 +32,8 @@ const Dashboard = () => (
       </Row>
       <Row
         type="flex"
-        gutter={16}
         justify="center"
+        gutter={8}
         className="margin-none"
       >
         <Col

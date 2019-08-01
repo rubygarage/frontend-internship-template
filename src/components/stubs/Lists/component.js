@@ -37,30 +37,40 @@ class Lists extends React.Component {
       <Layout>
         <Header />
         <Layout.Content>
-          <Row>
+          <Row
+            type="flex"
+            justify="center"
+            className="top-margin"
+          >
             <Col
-              offset={2}
-              span={20}
+              xs={{ span: 24 }}
+              sm={{ span: 20 }}
+              md={{ span: 20 }}
+              lg={{ span: 20 }}
+              xl={{ span: 20 }}
             >
-              <div className="top-margin">
-                <Typography.Title>
-                  My Lists
-                  {' '}
-                  <Icon
-                    type="plus-circle"
-                    onClick={this.showModal}
-                  />
-                </Typography.Title>
-              </div>
+              <Typography.Title className="title">
+                My Lists
+                {' '}
+                <Icon
+                  type="plus-circle"
+                  onClick={this.showModal}
+                />
+              </Typography.Title>
             </Col>
           </Row>
           <Row
-            gutter={8}
             type="flex"
+            justify="center"
+            gutter={8}
+            className="margin-none"
           >
             <Col
-              span={20}
-              offset={2}
+              xs={{ span: 24 }}
+              sm={{ span: 20 }}
+              md={{ span: 20 }}
+              lg={{ span: 20 }}
+              xl={{ span: 20 }}
             >
               {range(10).map(index => (
                 <Col
@@ -70,10 +80,10 @@ class Lists extends React.Component {
                   md={{ span: 6 }}
                   lg={{ span: 4 }}
                   xl={{ span: 4 }}
+                  className="bottom-margin"
                 >
                   <Card
                     hoverable
-                    className="top-margin"
                     actions={[<Icon
                       key="delete"
                       type="delete"

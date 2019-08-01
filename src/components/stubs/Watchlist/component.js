@@ -19,23 +19,33 @@ const Watchlist = () => (
   <Layout>
     <Header />
     <Layout.Content>
-      <Row>
+      <Row
+        type="flex"
+        justify="center"
+        className="top-margin"
+      >
         <Col
-          offset={2}
-          span={20}
+          xs={{ span: 24 }}
+          sm={{ span: 20 }}
+          md={{ span: 20 }}
+          lg={{ span: 20 }}
+          xl={{ span: 20 }}
         >
-          <div className="top-margin">
-            <Typography.Title>Watchlist</Typography.Title>
-          </div>
+          <Typography.Title className="title">Watchlist</Typography.Title>
         </Col>
       </Row>
       <Row
-        gutter={8}
         type="flex"
+        justify="center"
+        gutter={8}
+        className="margin-none"
       >
         <Col
-          span={20}
-          offset={2}
+          xs={{ span: 24 }}
+          sm={{ span: 20 }}
+          md={{ span: 20 }}
+          lg={{ span: 20 }}
+          xl={{ span: 20 }}
         >
           {range(10).map(item => (
             <Col
@@ -45,6 +55,7 @@ const Watchlist = () => (
               md={{ span: 8 }}
               lg={{ span: 6 }}
               xl={{ span: 4 }}
+              className="bottom-margin"
             >
               <Movie
                 actions={[<Icon
