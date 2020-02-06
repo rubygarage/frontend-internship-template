@@ -65,11 +65,11 @@ class Lists extends React.Component {
               {range(10).map(index => (
                 <Col
                   key={index}
-                  xs={{ span: 12 }}
+                  xs={{ span: 24 }}
                   sm={{ span: 8 }}
-                  md={{ span: 6 }}
-                  lg={{ span: 4 }}
-                  xl={{ span: 4 }}
+                  md={{ span: 8 }}
+                  lg={{ span: 6 }}
+                  xl={{ span: 6 }}
                 >
                   <Card
                     hoverable

@@ -34,11 +34,11 @@ const Header = () => (
         <Typography.Text>THE MOVIE DB</Typography.Text>
       </Col>
       <Col>
-        <Avatar icon="user" />
-        {' '}
         <Dropdown overlay={Overlay}>
           <Typography.Text>
-            Username
+            <Avatar icon="user" />
+            {' '}
+            <span className="hide-sm-down">Username</span>
             {' '}
             <Icon type="caret-down" />
           </Typography.Text>
