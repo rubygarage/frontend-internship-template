@@ -74,7 +74,7 @@ class ListDetails extends React.Component {
               {range(10).map(item => (
                 <Col
                   key={item}
-                  xs={{ span: 12 }}
+                  xs={{ span: 24 }}
                   sm={{ span: 12 }}
                   md={{ span: 8 }}
                   lg={{ span: 6 }}

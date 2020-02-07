@@ -18,6 +18,11 @@ body,
   background-color: #fff;
 }
 
+.ant-row-flex {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
 .ant-layout-header .ant-typography {
   color: #fff;
 }
@@ -49,4 +54,10 @@ body,
 
 .movie-data {
   margin-top: 20pt;
+}
+
+.hide-sm-down {
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
 }

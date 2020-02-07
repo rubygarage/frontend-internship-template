@@ -39,11 +39,11 @@ const Dashboard = () => (
             {range(17).map(item => (
               <Col
                 key={item}
-                xs={{ span: 12 }}
+                xs={{ span: 24 }}
                 sm={{ span: 12 }}
                 md={{ span: 8 }}
                 lg={{ span: 6 }}
-                xl={{ span: 4 }}
+                xl={{ span: 6 }}
               >
                 <Movie />
               </Col>
