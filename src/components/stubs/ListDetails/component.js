@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-  Layout, Row, Col, Typography, Modal, Icon, Pagination
+  Layout, Row, Col, Typography, Modal, Pagination
 } from 'antd'
+import { MinusCircleOutlined, DeleteOutlined } from '@ant-design/icons'
 import { range } from 'lodash'
 
 import Header from '../Header'
@@ -55,10 +56,7 @@ class ListDetails extends React.Component {
                 <Typography.Title>
                   List item 1
                   {' '}
-                  <Icon
-                    type="minus-circle"
-                    onClick={showDeleteListModal}
-                  />
+                  <MinusCircleOutlined onClick={showDeleteListModal} />
                 </Typography.Title>
               </div>
             </Col>
@@ -81,11 +79,12 @@ class ListDetails extends React.Component {
                   xl={{ span: 4 }}
                 >
                   <Movie
-                    actions={[<Icon
-                      key="delete"
-                      type="delete"
-                      onClick={showDeleteMovieModal}
-                    />]}
+                    actions={[
+                      <DeleteOutlined
+                        key="delete"
+                        onClick={showDeleteMovieModal}
+                      />
+                    ]}
                   />
                 </Col>
               ))}

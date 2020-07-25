@@ -11,13 +11,19 @@ const Dashboard = () => (
   <Layout>
     <Header />
     <Layout.Content>
-      <Row type="flex">
+      <Row
+        justify="center"
+        gutter={{
+          xs: 8, sm: 16, md: 24, lg: 22
+        }}
+      >
         <Col
-          xs={{ span: 22, offset: 1 }}
-          sm={{ span: 20, offset: 2 }}
-          md={{ span: 18, offset: 3 }}
-          lg={{ span: 16, offset: 4 }}
-          xl={{ span: 14, offset: 5 }}
+          className="gutter-row"
+          xs={{ span: 20 }}
+          sm={{ span: 20 }}
+          md={{ span: 14 }}
+          lg={{ span: 12 }}
+          xl={{ span: 10 }}
         >
           <Input.Search
             placeholder="Enter movie name"
@@ -33,21 +39,27 @@ const Dashboard = () => (
           gutter={16}
         >
           <Col
+            className="gutter-row"
             span={20}
             offset={2}
           >
-            {range(17).map(item => (
-              <Col
-                key={item}
-                xs={{ span: 24 }}
-                sm={{ span: 12 }}
-                md={{ span: 8 }}
-                lg={{ span: 6 }}
-                xl={{ span: 6 }}
-              >
-                <Movie />
-              </Col>
-            ))}
+            <Row gutter={{
+              xs: 8, sm: 16, md: 24, lg: 32
+            }}
+            >
+              {range(17).map(item => (
+                <Col
+                  key={item}
+                  xs={{ span: 24 }}
+                  sm={{ span: 12 }}
+                  md={{ span: 8 }}
+                  lg={{ span: 6 }}
+                  xl={{ span: 6 }}
+                >
+                  <Movie />
+                </Col>
+              ))}
+            </Row>
           </Col>
         </Row>
         <Row

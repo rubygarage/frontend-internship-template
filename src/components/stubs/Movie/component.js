@@ -6,13 +6,13 @@ import {
   Col,
   Carousel,
   Typography,
-  Icon,
   Card,
   Tag,
   Popover,
   Button,
   Modal
 } from 'antd'
+import { HeartOutlined, BookOutlined, PlusCircleOutlined } from '@ant-design/icons'
 import { range } from 'lodash'
 
 import Header from '../Header'
@@ -136,17 +136,15 @@ class Movie extends React.Component {
                       />
 )}
                   >
-                    <Icon type="plus-circle" />
+                    <PlusCircleOutlined />
                   </Popover>
                   {' '}
-                  <Icon
-                    type="heart"
+                  <HeartOutlined
                     theme={watchlist ? 'filled' : undefined}
                     onClick={this.handleWatchlist}
                   />
                   {' '}
-                  <Icon
-                    type="book"
+                  <BookOutlined
                     theme={bookmarked ? 'filled' : undefined}
                     onClick={this.handleBookmark}
                   />

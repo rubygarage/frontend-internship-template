@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-  Layout, Row, Col, Typography, Modal, Icon, Pagination
+  Layout, Row, Col, Typography, Modal, Pagination
 } from 'antd'
+import { DeleteOutlined } from '@ant-design/icons'
 import { range } from 'lodash'
 
 import Header from '../Header'
@@ -46,12 +47,14 @@ const Watchlist = () => (
               lg={{ span: 6 }}
               xl={{ span: 6 }}
             >
+
               <Movie
-                actions={[<Icon
-                  key="delete"
-                  type="delete"
-                  onClick={showDeleteMovieModal}
-                />]}
+                actions={[
+                  <DeleteOutlined
+                    key="delete"
+                    onClick={showDeleteMovieModal}
+                  />
+                ]}
               />
             </Col>
           ))}

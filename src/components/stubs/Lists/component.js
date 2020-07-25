@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-  Layout, Row, Col, Card, Typography, Modal, Icon, Pagination
+  Layout, Row, Col, Card, Typography, Modal, Pagination
 } from 'antd'
+import { PlusCircleOutlined, DeleteOutlined } from '@ant-design/icons'
 import { range } from 'lodash'
 
 import Header from '../Header'
@@ -46,10 +47,7 @@ class Lists extends React.Component {
                 <Typography.Title>
                   My Lists
                   {' '}
-                  <Icon
-                    type="plus-circle"
-                    onClick={this.showModal}
-                  />
+                  <PlusCircleOutlined onClick={this.showModal} />
                 </Typography.Title>
               </div>
             </Col>
@@ -74,11 +72,12 @@ class Lists extends React.Component {
                   <Card
                     hoverable
                     className="top-margin"
-                    actions={[<Icon
-                      key="delete"
-                      type="delete"
-                      onClick={showModal}
-                    />]}
+                    actions={[
+                      <DeleteOutlined
+                        key="delete"
+                        onClick={showModal}
+                      />
+                    ]}
                   >
                     <Typography.Title level={4}>
                       List name
