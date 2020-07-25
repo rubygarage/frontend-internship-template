@@ -134,7 +134,7 @@ class Movie extends React.Component {
                         openModal={this.showModal}
                         closePopover={() => this.handleVisiblePopover(false)}
                       />
-)}
+                    )}
                   >
                     <PlusCircleOutlined />
                   </Popover>
@@ -225,31 +225,37 @@ class Movie extends React.Component {
                 span={20}
                 offset={2}
               >
-                {range(10).map(index => (
-                  <Col
-                    key={index}
-                    xs={{ span: 24 }}
-                    sm={{ span: 8 }}
-                    md={{ span: 6 }}
-                    lg={{ span: 4 }}
-                    xl={{ span: 4 }}
-                  >
-                    <Card
-                      cover={(
-                        <img
-                          alt="example"
-                          src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg"
-                        />
-)}
-                      className="top-margin"
+                <Row
+                  gutter={{
+                    xs: 8, sm: 16, md: 24, lg: 32
+                  }}
+                >
+                  {range(10).map(index => (
+                    <Col
+                      key={index}
+                      xs={{ span: 24 }}
+                      sm={{ span: 12 }}
+                      md={{ span: 8 }}
+                      lg={{ span: 8 }}
+                      xl={{ span: 6 }}
                     >
-                      <Card.Meta
-                        title="Robert Downey Jr."
-                        description="Ironman"
-                      />
-                    </Card>
-                  </Col>
-                ))}
+                      <Card
+                        cover={(
+                          <img
+                            alt="example"
+                            src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg"
+                          />
+                      )}
+                        className="top-margin"
+                      >
+                        <Card.Meta
+                          title="Robert Downey Jr."
+                          description="Ironman"
+                        />
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
               </Col>
             </Row>
             <Row>
@@ -269,31 +275,36 @@ class Movie extends React.Component {
                 span={20}
                 offset={2}
               >
-                {range(10).map(index => (
-                  <Col
-                    key={index}
-                    xs={{ span: 12 }}
-                    sm={{ span: 8 }}
-                    md={{ span: 6 }}
-                    lg={{ span: 4 }}
-                    xl={{ span: 4 }}
-                  >
-                    <Card
-                      cover={(
-                        <img
-                          alt="example"
-                          src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg"
-                        />
-)}
-                      className="top-margin"
+                <Row gutter={{
+                  xs: 8, sm: 16, md: 24, lg: 32
+                }}
+                >
+                  {range(10).map(index => (
+                    <Col
+                      key={index}
+                      xs={{ span: 12 }}
+                      sm={{ span: 8 }}
+                      md={{ span: 6 }}
+                      lg={{ span: 8 }}
+                      xl={{ span: 6 }}
                     >
-                      <Card.Meta
-                        title="Robert Downey Jr."
-                        description="Ironman"
-                      />
-                    </Card>
-                  </Col>
-                ))}
+                      <Card
+                        cover={(
+                          <img
+                            alt="example"
+                            src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg"
+                          />
+)}
+                        className="top-margin"
+                      >
+                        <Card.Meta
+                          title="Robert Downey Jr."
+                          description="Ironman"
+                        />
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
               </Col>
             </Row>
           </div>

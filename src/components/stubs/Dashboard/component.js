@@ -43,9 +43,10 @@ const Dashboard = () => (
             span={20}
             offset={2}
           >
-            <Row gutter={{
-              xs: 8, sm: 16, md: 24, lg: 32
-            }}
+            <Row
+              gutter={{
+                xs: 8, sm: 16, md: 24, lg: 32
+              }}
             >
               {range(17).map(item => (
                 <Col
@@ -53,7 +54,7 @@ const Dashboard = () => (
                   xs={{ span: 24 }}
                   sm={{ span: 12 }}
                   md={{ span: 8 }}
-                  lg={{ span: 6 }}
+                  lg={{ span: 8 }}
                   xl={{ span: 6 }}
                 >
                   <Movie />

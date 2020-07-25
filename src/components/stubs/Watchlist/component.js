@@ -38,26 +38,32 @@ const Watchlist = () => (
           span={20}
           offset={2}
         >
-          {range(10).map(item => (
-            <Col
-              key={item}
-              xs={{ span: 24 }}
-              sm={{ span: 12 }}
-              md={{ span: 8 }}
-              lg={{ span: 6 }}
-              xl={{ span: 6 }}
-            >
+          <Row
+            gutter={{
+              xs: 8, sm: 16, md: 24, lg: 32
+            }}
+          >
+            {range(10).map(item => (
+              <Col
+                key={item}
+                xs={{ span: 24 }}
+                sm={{ span: 12 }}
+                md={{ span: 8 }}
+                lg={{ span: 8 }}
+                xl={{ span: 6 }}
+              >
 
-              <Movie
-                actions={[
-                  <DeleteOutlined
-                    key="delete"
-                    onClick={showDeleteMovieModal}
-                  />
-                ]}
-              />
-            </Col>
-          ))}
+                <Movie
+                  actions={[
+                    <DeleteOutlined
+                      key="delete"
+                      onClick={showDeleteMovieModal}
+                    />
+                  ]}
+                />
+              </Col>
+            ))}
+          </Row>
         </Col>
       </Row>
       <Row

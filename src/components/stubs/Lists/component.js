@@ -60,33 +60,39 @@ class Lists extends React.Component {
               span={20}
               offset={2}
             >
-              {range(10).map(index => (
-                <Col
-                  key={index}
-                  xs={{ span: 24 }}
-                  sm={{ span: 8 }}
-                  md={{ span: 8 }}
-                  lg={{ span: 6 }}
-                  xl={{ span: 6 }}
-                >
-                  <Card
-                    hoverable
-                    className="top-margin"
-                    actions={[
-                      <DeleteOutlined
-                        key="delete"
-                        onClick={showModal}
-                      />
-                    ]}
+              <Row
+                gutter={{
+                  xs: 8, sm: 16, md: 24, lg: 32
+                }}
+              >
+                {range(10).map(index => (
+                  <Col
+                    key={index}
+                    xs={{ span: 24 }}
+                    sm={{ span: 12 }}
+                    md={{ span: 8 }}
+                    lg={{ span: 8 }}
+                    xl={{ span: 6 }}
                   >
-                    <Typography.Title level={4}>
+                    <Card
+                      hoverable
+                      className="top-margin"
+                      actions={[
+                        <DeleteOutlined
+                          key="delete"
+                          onClick={showModal}
+                        />
+                      ]}
+                    >
+                      <Typography.Title level={4}>
                       List name
-                      {index}
-                    </Typography.Title>
+                        {index}
+                      </Typography.Title>
                     Description
-                  </Card>
-                </Col>
-              ))}
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
             </Col>
           </Row>
           <Row
