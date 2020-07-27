@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-  Layout, Row, Col, Typography, Modal, Icon, Pagination
+  Layout, Row, Col, Typography, Modal, Pagination
 } from 'antd'
+import { MinusCircleOutlined, DeleteOutlined } from '@ant-design/icons'
 import { range } from 'lodash'
 
 import Header from '../Header'
@@ -55,10 +56,7 @@ class ListDetails extends React.Component {
                 <Typography.Title>
                   List item 1
                   {' '}
-                  <Icon
-                    type="minus-circle"
-                    onClick={showDeleteListModal}
-                  />
+                  <MinusCircleOutlined onClick={showDeleteListModal} />
                 </Typography.Title>
               </div>
             </Col>
@@ -71,24 +69,31 @@ class ListDetails extends React.Component {
               span={20}
               offset={2}
             >
-              {range(10).map(item => (
-                <Col
-                  key={item}
-                  xs={{ span: 24 }}
-                  sm={{ span: 12 }}
-                  md={{ span: 8 }}
-                  lg={{ span: 6 }}
-                  xl={{ span: 4 }}
-                >
-                  <Movie
-                    actions={[<Icon
-                      key="delete"
-                      type="delete"
-                      onClick={showDeleteMovieModal}
-                    />]}
-                  />
-                </Col>
-              ))}
+              <Row
+                gutter={{
+                  xs: 8, sm: 16, md: 24, lg: 32
+                }}
+              >
+                {range(10).map(item => (
+                  <Col
+                    key={item}
+                    xs={{ span: 24 }}
+                    sm={{ span: 12 }}
+                    md={{ span: 8 }}
+                    lg={{ span: 8 }}
+                    xl={{ span: 6 }}
+                  >
+                    <Movie
+                      actions={[
+                        <DeleteOutlined
+                          key="delete"
+                          onClick={showDeleteMovieModal}
+                        />
+                      ]}
+                    />
+                  </Col>
+                ))}
+              </Row>
             </Col>
           </Row>
           <Row

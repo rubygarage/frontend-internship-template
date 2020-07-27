@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-  Typography, Row, Col, Avatar, Dropdown, Icon, Menu, Layout
+  Typography, Row, Col, Avatar, Dropdown, Menu, Layout
 } from 'antd'
+import { CaretDownOutlined, UserOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 
 const Overlay = () => (
@@ -36,11 +37,11 @@ const Header = () => (
       <Col>
         <Dropdown overlay={Overlay}>
           <Typography.Text>
-            <Avatar icon="user" />
+            <Avatar icon={(<UserOutlined />)} />
             {' '}
             <span className="hide-sm-down">Username</span>
             {' '}
-            <Icon type="caret-down" />
+            <CaretDownOutlined />
           </Typography.Text>
         </Dropdown>
       </Col>

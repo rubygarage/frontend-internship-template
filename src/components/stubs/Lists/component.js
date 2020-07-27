@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-  Layout, Row, Col, Card, Typography, Modal, Icon, Pagination
+  Layout, Row, Col, Card, Typography, Modal, Pagination
 } from 'antd'
+import { PlusCircleOutlined, DeleteOutlined } from '@ant-design/icons'
 import { range } from 'lodash'
 
 import Header from '../Header'
@@ -46,10 +47,7 @@ class Lists extends React.Component {
                 <Typography.Title>
                   My Lists
                   {' '}
-                  <Icon
-                    type="plus-circle"
-                    onClick={this.showModal}
-                  />
+                  <PlusCircleOutlined onClick={this.showModal} />
                 </Typography.Title>
               </div>
             </Col>
@@ -62,32 +60,39 @@ class Lists extends React.Component {
               span={20}
               offset={2}
             >
-              {range(10).map(index => (
-                <Col
-                  key={index}
-                  xs={{ span: 24 }}
-                  sm={{ span: 8 }}
-                  md={{ span: 8 }}
-                  lg={{ span: 6 }}
-                  xl={{ span: 6 }}
-                >
-                  <Card
-                    hoverable
-                    className="top-margin"
-                    actions={[<Icon
-                      key="delete"
-                      type="delete"
-                      onClick={showModal}
-                    />]}
+              <Row
+                gutter={{
+                  xs: 8, sm: 16, md: 24, lg: 32
+                }}
+              >
+                {range(10).map(index => (
+                  <Col
+                    key={index}
+                    xs={{ span: 24 }}
+                    sm={{ span: 12 }}
+                    md={{ span: 8 }}
+                    lg={{ span: 8 }}
+                    xl={{ span: 6 }}
                   >
-                    <Typography.Title level={4}>
+                    <Card
+                      hoverable
+                      className="top-margin"
+                      actions={[
+                        <DeleteOutlined
+                          key="delete"
+                          onClick={showModal}
+                        />
+                      ]}
+                    >
+                      <Typography.Title level={4}>
                       List name
-                      {index}
-                    </Typography.Title>
+                        {index}
+                      </Typography.Title>
                     Description
-                  </Card>
-                </Col>
-              ))}
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
             </Col>
           </Row>
           <Row

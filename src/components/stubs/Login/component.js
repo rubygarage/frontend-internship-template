@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-  Button, Col, Form, Icon, Input, Layout, Row, Typography
+  Button, Col, Form, Input, Layout, Row, Typography
 } from 'antd'
+import { UserOutlined, LockOutlined } from '@ant-design/icons'
 
 const Login = () => (
   <div className="center">
@@ -20,22 +21,20 @@ const Login = () => (
               >
                 <Input
                   prefix={(
-                    <Icon
-                      type="user"
+                    <UserOutlined
                       style={{ color: 'rgba(0,0,0,.25)' }}
                     />
-)}
+                  )}
                   placeholder="Username"
                 />
               </Form.Item>
               <Form.Item>
                 <Input
                   prefix={(
-                    <Icon
-                      type="lock"
+                    <LockOutlined
                       style={{ color: 'rgba(0,0,0,.25)' }}
                     />
-)}
+                  )}
                   type="password"
                   placeholder="Password"
                 />
